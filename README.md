@@ -1,1 +1,1 @@
-# ReactStudio : fot leraning React 16
+# ReactStudio : for learning React 16
