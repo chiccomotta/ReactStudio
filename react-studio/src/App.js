@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+
 import logo from './logo.svg'
 import { HelloWorld, oggi } from './components/HelloWorld'
+import { TrComp, people } from './components/personComponent'
 import './App.css'
 
 const dati = {
@@ -13,7 +15,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div style={{ width: '50%' }}>
-          <table class="table table-sm table-hover bg-warning">
+          <table className="table table-sm table-hover bg-warning">
             <thead>
               <tr>
                 <th scope="col">#</th>
@@ -23,23 +25,7 @@ function App() {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-              </tr>
+              <TrComp todos={people} />
             </tbody>
           </table>
         </div>
