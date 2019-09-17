@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import LoginComponent from './LoginComponent'
-import { CounterWithNameAndSideEffect } from './HookComponent'
+import { FormComponent } from './FormComponent'
 
 function Index() {
   return <p>Home</p>
@@ -14,13 +14,6 @@ function About() {
 class Users extends React.Component {
   constructor(props) {
     super(props)
-
-    const { match, location } = props
-
-    console.log('-------------------------props')
-    console.log(match)
-    console.log(location)
-    console.log(match.params)
   }
 
   render() {
@@ -48,7 +41,7 @@ function AppRouter() {
               <Link to="/users/123">Users 123</Link>
             </li>
             <li>
-              <Link to="/hooks/">hooks</Link>
+              <Link to="/form/">Form</Link>
             </li>
           </ul>
         </nav>
@@ -57,7 +50,7 @@ function AppRouter() {
         <Route path="/about/" component={About} />
         <Route exact path="/users/" component={Users} />
         <Route exact path="/users/:id" component={Users} />
-        <Route path="/hooks/" component={CounterWithNameAndSideEffect} />
+        <Route path="/form/" component={FormComponent} />
       </div>
     </Router>
   )

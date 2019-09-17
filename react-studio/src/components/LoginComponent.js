@@ -1,4 +1,5 @@
 import React, { Fragment, Component } from 'react'
+import Cat from '../data/cat.png'
 
 class LoginComponent extends Component {
   constructor(props) {
@@ -39,6 +40,7 @@ class LoginComponent extends Component {
           <input id="sname-input" onChange={this.onChange2} value={this.state.Cognome} />
         </code>
         <div>
+          <img src={Cat} height="64px" width="64px"></img>
           <button onClick={this.send}>Invia</button>
         </div>
       </Fragment>
