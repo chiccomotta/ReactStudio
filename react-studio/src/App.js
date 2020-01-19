@@ -1,8 +1,6 @@
-import React, { Fragment } from 'react'
-import logo from './logo.svg'
-import AppRouter from './components/AppRouter'
-
-import './App.css'
+import React from "react";
+import "./App.css";
+import AppRouter from "./components/AppRouter";
 
 function App() {
   return (
@@ -10,7 +8,7 @@ function App() {
       <header className="App-header" />
       <AppRouter />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 import { FormComponent } from "./FormComponent";
 import { HookExample } from "./HookComponent";
 import LoginComponent from "./LoginComponent";
+import { TodoComponent } from "./TodoComponent";
 
 function Index() {
   return <p>Home</p>;
@@ -33,7 +34,7 @@ function AppRouter() {
               <Link to="/">Login</Link>
             </li>
             <li>
-              <Link to="/about/">About</Link>
+              <Link to="/todo/">Todo Component with Redux</Link>
             </li>
             <li>
               <Link to="/users/">Users</Link>
@@ -51,7 +52,7 @@ function AppRouter() {
         </nav>
 
         <Route path="/" exact component={LoginComponent} />
-        <Route path="/about/" component={About} />
+        <Route path="/todo/" component={TodoComponent} />
         <Route exact path="/users/" component={Users} />
         <Route exact path="/users/:id" component={Users} />
         <Route path="/form/" component={FormComponent} />
