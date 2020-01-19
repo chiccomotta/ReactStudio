@@ -1,32 +1,32 @@
-import React, { Fragment, Component } from 'react'
-import Cat from '../data/cat.png'
+import React, { Component, Fragment } from "react";
+import Cat from "../data/cat.png";
 
 class LoginComponent extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
-      Nome: '',
-      Cognome: ''
-    }
+      Nome: "",
+      Cognome: ""
+    };
   }
 
   onChange = e => {
     this.setState({
       Nome: e.target.value
-    })
-  }
+    });
+  };
 
   onChange2 = e => {
-    this.setState({ Cognome: e.target.value })
-  }
+    this.setState({ Cognome: e.target.value });
+  };
 
   send = () => {
-    console.log(this.state)
-  }
+    console.log(this.state);
+  };
 
   componentDidMount() {
-    console.log('Component mounted in DOM')
+    console.log("Component mounted in DOM");
   }
 
   render() {
@@ -35,17 +35,25 @@ class LoginComponent extends Component {
         {this.props.children}
         <code className="space10">
           <label htmlFor="name-input">Name:</label>
-          <input id="name-input" onChange={this.onChange} value={this.state.Nome} />
+          <input
+            id="name-input"
+            onChange={this.onChange}
+            value={this.state.Nome}
+          />
           <label htmlFor="sname-input">Surname:</label>
-          <input id="sname-input" onChange={this.onChange2} value={this.state.Cognome} />
+          <input
+            id="sname-input"
+            onChange={this.onChange2}
+            value={this.state.Cognome}
+          />
         </code>
         <div>
           <img src={Cat} height="64px" width="64px"></img>
           <button onClick={this.send}>Invia</button>
         </div>
       </Fragment>
-    )
+    );
   }
 }
 
-export default LoginComponent
+export default LoginComponent;

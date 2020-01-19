@@ -1,24 +1,25 @@
-import React from 'react'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import LoginComponent from './LoginComponent'
-import { FormComponent } from './FormComponent'
+import React from "react";
+import { BrowserRouter as Router, Link, Route } from "react-router-dom";
+import { FormComponent } from "./FormComponent";
+import { HookExample } from "./HookComponent";
+import LoginComponent from "./LoginComponent";
 
 function Index() {
-  return <p>Home</p>
+  return <p>Home</p>;
 }
 
 function About() {
-  return <p>About</p>
+  return <p>About</p>;
 }
 
 class Users extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {
-    const { match } = this.props
-    return <p>Users {match.params.id}</p>
+    const { match } = this.props;
+    return <p>Users {match.params.id}</p>;
   }
 }
 
@@ -43,6 +44,9 @@ function AppRouter() {
             <li>
               <Link to="/form/">Form</Link>
             </li>
+            <li>
+              <Link to="/hook/">Hook</Link>
+            </li>
           </ul>
         </nav>
 
@@ -51,9 +55,10 @@ function AppRouter() {
         <Route exact path="/users/" component={Users} />
         <Route exact path="/users/:id" component={Users} />
         <Route path="/form/" component={FormComponent} />
+        <Route path="/hook/" component={HookExample} />
       </div>
     </Router>
-  )
+  );
 }
 
-export default AppRouter
+export default AppRouter;
