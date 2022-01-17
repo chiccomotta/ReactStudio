@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
 
 export const HookExample = () => {
   // Dichiara una nuova variable di stato, che chiameremo "contatore"
-  const [contatore, setContatore] = useState(0);
+  const [contatore, setContatore] = useState(0)
 
   /*
     Cosa passiamo a useState come argomento? L’unico argomento per l’Hook useState() è lo stato iniziale. 
@@ -22,5 +22,5 @@ export const HookExample = () => {
       <p>Hai cliccato {contatore} volte</p>
       <button onClick={() => setContatore(contatore + 1)}>Cliccami</button>
     </div>
-  );
-};
+  )
+}
