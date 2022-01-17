@@ -4,7 +4,7 @@ import { FormComponent } from "./FormComponent"
 import { HookExample } from "./HookComponent"
 import LoginComponent from "./LoginComponent"
 import { TodoComponent } from "./TodoComponent"
-import { BeforeUnload } from "./beforeUnload"
+import { BeforeUnload } from "./BeforeUnload"
 
 function Index() {
   return <p>Home</p>
