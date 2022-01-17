@@ -8,12 +8,12 @@ export const BeforeUnload = () => {
     evt.returnValue = ""
   }
 
-  // Calling Cleanup before browser or tab closing
   const subscribe = () => {
     // Attenzione: devo legare lo stesso handler che poi andrò a rimuovere nella funzione di cleanup
     // (in questo caso onBeforeOnloadHandler)
     window.addEventListener("beforeunload", onBeforeOnloadHandler)
 
+    // Cleanup
     return () => {
       window.removeEventListener("beforeunload", onBeforeOnloadHandler)
     }
