@@ -6,14 +6,6 @@ import LoginComponent from "./LoginComponent"
 import { TodoComponent } from "./TodoComponent"
 import { BeforeUnload } from "./BeforeUnload"
 
-function Index() {
-  return <p>Home</p>
-}
-
-function About() {
-  return <p>About</p>
-}
-
 class Users extends React.Component {
   constructor(props) {
     super(props)
